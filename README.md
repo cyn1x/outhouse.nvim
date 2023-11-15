@@ -5,6 +5,8 @@ Displays subprocess output in a window within the editor.
 
 </div>
 
+![Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXhqcWdkcGZvdzJmMXBweWFtM3IyMTl4MDZuZWZxdjl3YTMzdmR1MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uXkrxjuoge5xvUj5kj/giphy.gif)
+
 ## Installation
 
 Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
