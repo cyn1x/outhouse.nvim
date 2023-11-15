@@ -3,7 +3,7 @@ local layout = require('outhouse.layout')
 local M = {}
 
 -- Requests user input if there is no filepath given
-local validatePath = function(path)
+local validate_path = function(path)
     if path == nil then
         local input = vim.fn.input('Filepath: ')
         return input
@@ -15,7 +15,7 @@ end
 -- Writes subprocess output to the output buffer
 M.subprocess = function(path)
     local append = false
-    local OnEvent = function(id, data, event)
+    local on_event = function(id, data, event)
         _ = id
         _ = event
         -- print(vim.inspect(data))
@@ -37,14 +37,14 @@ M.subprocess = function(path)
     end
 
     if vim.g.output_bufnr == nil then
-        layout.createOutputBuffer()
+        layout.create_output_buffer()
     end
 
-    local filepath = validatePath(path)
+    local filepath = validate_path(path)
     if vim.api.nvim_buf_is_valid(vim.g.output_bufnr) then
         vim.fn.jobstart(filepath, {
-            on_stdout = OnEvent,
-            on_stderr = OnEvent,
+            on_stdout = on_event,
+            on_stderr = on_event,
             stdout_buffered = false,
             stderr_buffered = false,
         })

@@ -9,7 +9,9 @@ M.setup = function(args)
         settings.set(args)
     end
 
-    layout.createOutputBuffer()
+    if not settings.current.disabled then
+        layout.create_output_buffer()
+    end
 end
 
 return M

@@ -4,11 +4,16 @@
 local M = {}
 
 -- TODO: Provide startup customization options
-local default_settings = {}
-local current_settings = default_settings
+local default_settings = {
+    disabled = false,
+
+    -- Window will be aligned horizontally if this value is false
+    vertical = true
+}
+M.current = default_settings
 
 M.set = function(opts)
-    current_settings = vim.tbl_deep_extend("force", vim.deepcopy(current_settings), opts)
+    M.current = vim.tbl_deep_extend("force", vim.deepcopy(M.current), opts)
 end
 
 -- Closes the output window if it is the last open window

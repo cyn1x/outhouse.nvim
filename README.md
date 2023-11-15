@@ -17,8 +17,12 @@ use 'cyn1x/outhouse.nvim'
 
 Using [Lua](http://www.lua.org/)
 
+Call `handler.subprocess()` to run an external program.
+
 ```lua
-require('outhouse').setup({})
+require('outhouse').setup{
+    vertical = true
+}
 
 local handler = require('outhouse.handler')
 
@@ -33,7 +37,7 @@ vim.keymap.set("n", "<leader><leader>x", function()
 end)
 ```
 
-The example above assumes that the project root directory contains an `.init.lua` file with global variables denoting the path of their corresponding build scripts. If the global variables do not exist, the program will prompt for a file path.
+The example above assumes that the project root directory where `nvim` started in contains an `.init.lua` file with global variables denoting the path of their corresponding build scripts. If the global variables do not exist, the program will prompt for a file path.
 
 ## Contributing
 
