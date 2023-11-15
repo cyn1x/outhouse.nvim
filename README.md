@@ -1,2 +1,2 @@
-# outputwindow.nvim
-Displays subprocess output in a window within the editor.
+# outhouse.nvim
+Streams subprocess output to a buffer window within the editor.
