@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader><leader>x", function()
 end)
 ```
 
-The example above assumes that the project root directory contains a `.init.lua` with global variables contain strings with the path of their corresponding build scripts. If the global variables do not exist, the program will prompt for a filepath.
+The example above assumes that the project root directory contains an `.init.lua` file with global variables denoting the path of their corresponding build scripts. If the global variables do not exist, the program will prompt for a file path.
 
 ## Contributing
 
