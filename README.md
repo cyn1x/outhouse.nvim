@@ -5,7 +5,7 @@ Displays subprocess output in a window within the editor.
 
 </div>
 
-![Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXhqcWdkcGZvdzJmMXBweWFtM3IyMTl4MDZuZWZxdjl3YTMzdmR1MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uXkrxjuoge5xvUj5kj/giphy.gif)
+![Preview](https://i.imgur.com/tNelVa0.gif)
 
 ## Installation
 
@@ -17,13 +17,12 @@ use 'cyn1x/outhouse.nvim'
 
 ## Usage
 
-Using [Lua](http://www.lua.org/)
-
 Call `handler.subprocess()` to run an external program.
 
 ```lua
 require('outhouse').setup{
-    vertical = true
+    auto_start = true,
+    vertical = true,
 }
 
 local handler = require('outhouse.handler')
@@ -39,7 +38,7 @@ vim.keymap.set("n", "<leader><leader>x", function()
 end)
 ```
 
-The example above assumes that the project root directory where `nvim` started in contains an `.init.lua` file with global variables denoting the path of their corresponding build scripts. If the global variables do not exist, the program will prompt for a file path.
+The example above assumes that the project root directory where `nvim` was started in contains an `.init.lua` file with global variables denoting the path of their corresponding build scripts. If the global variables do not exist or their paths are invalid, the program will prompt for a file path.
 
 ## Contributing
 
@@ -48,4 +47,3 @@ Pull requests are welcome.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
