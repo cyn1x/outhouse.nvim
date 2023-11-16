@@ -9,7 +9,7 @@ M.setup = function(args)
         settings.set(args)
     end
 
-    if not settings.current.disabled then
+    if settings.current.auto_start then
         layout.create_output_buffer()
     end
 end

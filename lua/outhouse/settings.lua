@@ -5,7 +5,7 @@ local M = {}
 
 -- TODO: Provide startup customization options
 local default_settings = {
-    disabled = false,
+    auto_start = false,
 
     -- Window will be aligned horizontally if this value is false
     vertical = true
