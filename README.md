@@ -1,7 +1,7 @@
 <div align="center">
 
 # Outhouse.nvim
-Displays subprocess output in a window within the editor.
+Streams subprocess output to a window buffer within the editor.
 
 </div>
 
