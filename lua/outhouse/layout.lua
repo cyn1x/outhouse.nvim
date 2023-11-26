@@ -1,4 +1,4 @@
-local settings = require("outhouse.settings")
+local settings = require('outhouse.settings')
 
 local M = {}
 
