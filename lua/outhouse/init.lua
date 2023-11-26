@@ -1,11 +1,14 @@
-local layout = require("outhouse.layout")
-local settings = require("outhouse.settings")
+local layout = require('outhouse.layout')
+local settings = require('outhouse.settings')
 
 local M = {}
 
 -- Entry point for the calling function
 M.setup = function(args)
     if args then
+        if args.disabled == true then
+            return
+        end
         settings.set(args)
     end
 
@@ -15,4 +18,3 @@ M.setup = function(args)
 end
 
 return M
-
