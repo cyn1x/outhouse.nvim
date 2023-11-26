@@ -15,13 +15,20 @@ Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 use 'cyn1x/outhouse.nvim'
 ```
 
+Using [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+'outhouse.nvim'
+```
+
 ## Usage
 
 Call `handler.subprocess()` to run an external program.
 
 ```lua
 require('outhouse').setup{
-    auto_start = true,
+    disabled = false,
+    auto_start = false,
     vertical = true,
 }
 
